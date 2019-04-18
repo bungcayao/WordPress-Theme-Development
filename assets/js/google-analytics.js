@@ -10,6 +10,6 @@
     m.parentNode.insertBefore(a, m)
 })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 //Account Info
-ga('create', 'UA-54664733-1', 'auto');
+ga('create', 'UA-XXXXXXXX-X', 'auto');
 // Track Page Views
 ga('send', 'pageview');

@@ -1,16 +1,16 @@
 
-POPin WordPress Theme
+WordPress Theme Development
 ===
 
-**Theme:** POPin (Waur!)
+**Theme:** WordPress Theme Setup
 
-**Version:** 6.0.0
+**Version:** 1.0.0
 
-**Contributors:** POPin Dev Team
+**Contributors:** Joshua Bungcayao
 
 **Requirements:** Wordpress 4.0.0 and Higher*
 
-**Description:** POPin WordPress Theme is forked from [Underscores] (https://underscores.me/) Theme Starer Kit and built around the [Bulma Framework] (https://bulma.io).
+**Description:** This WordPress Theme is forked from [Underscores] (https://underscores.me/) Theme Starer Kit and built around the [Bulma Framework] (https://bulma.io).
 
 
 

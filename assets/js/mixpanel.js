@@ -52,10 +52,10 @@
 })(document, window.mixpanel || []);
 
 if (wp_env == "production") {
-    mixpanel.init("a80bd0dd42ac046df2dd8f495887481b");
+    mixpanel.init("XXXXXXXXX_Production_ID");
     console.log("mixpanel:", wp_env);
 } else if (wp_env == "staging" || wp_env == "local") {
-    mixpanel.init("6a610f842d5841747653f3852e76b187");
+    mixpanel.init("XXXXXXXXX_Development_ID");
     console.log("mixpanel:", wp_env);
 } else {
     console.log("mixpnael is not tracking! There is no `wordpress penvironment` variable set!");
