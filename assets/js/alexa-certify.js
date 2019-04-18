@@ -1,6 +1,6 @@
 _atrk_opts = {
-    atrk_acct: "u1Ghr1SZw320l9",
-    domain: "popinnow.com",
+    atrk_acct: "XXXXXXXXXX",
+    domain: "example.com",
     dynamic: true
 };
 (function () {

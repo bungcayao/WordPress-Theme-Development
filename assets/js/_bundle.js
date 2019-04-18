@@ -17,10 +17,10 @@ require('./wrap-a-tag-space.js');
 require('./linkedin-tag.js');
 
 // Import Cookies Setup
-require('./pop-cookies.js');
+require('./theme-cookies.js');
 
 // Auto-Tenant
-require('./pop-autotenant.js');
+require('./theme-autotenant.js');
 
 // Import page-modules.js
 require('./page-modules.js');
