@@ -1,4 +1,7 @@
 
+See This Theme in Action:
+https://www.popinnow.com
+
 WordPress Theme Development
 ===
 
