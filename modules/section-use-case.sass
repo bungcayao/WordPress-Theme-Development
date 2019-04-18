@@ -1,0 +1,57 @@
+//  Module: Section Feature
+
+.section-use-case
+  .column
+    &.content
+      .has-border-all
+        margin: 1rem
+        border-color: #bcbcbc
+
+        p.category
+          margin-left: 1rem
+          margin-right: 1rem 
+          margin-top: 1rem
+        h2
+          margin: 0 1rem 1rem
+          // +desktop
+          //   min-height: 8rem
+          +tablet-only
+            min-height: 10rem
+          
+          min-height: 5rem
+
+
+        a.button
+          width: 100%
+          border-radius: 0
+          height: auto
+          padding-top: 10px
+          padding-bottom: 10px
+  
+  &.section-header-main
+    background-color: #000
+    // Dr + Dark BG
+    background-image: url('https://v.fastcdn.co/t/9782736d/bacc4af9/1537217840-34960641-365x414-SCL-Health.png')
+    background-size: auto 440px
+    background-position: 25% 100%
+    
+    +mobile
+      background: linear-gradient(20deg,#000 35%,#111 0)
+
+    .column
+      // +mobile
+      //   flex-direction: column-reverse
+
+    .section.level
+      padding-top: 0
+      padding-bottom: 0
+    
+    .has-bg-image
+      min-height: 440px
+  
+  &.section-footer
+    .columns
+      .column
+        &.is-4
+          +mobile
+            text-align: center

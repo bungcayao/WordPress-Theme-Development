@@ -1,0 +1,1546 @@
+"5ae767d50c901": {
+  "key": "5ae767d50c901",
+  "name": "sectionTile",
+  "label": "Section Tile",
+  "display": "block",
+  "sub_fields": [
+      {
+          "key": "field_5ae805e60a8f7",
+          "label": "Main Tile",
+          "name": "",
+          "type": "tab",
+          "instructions": "Select type of tile you want to be on the main view",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "placement": "left",
+          "endpoint": 0
+      },
+      {
+          "key": "field_5ae80b4a70aa0",
+          "label": "Main Tile",
+          "name": "mainTile",
+          "type": "repeater",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "collapsed": "field_5ae7a4312477f",
+          "min": 0,
+          "max": 0,
+          "layout": "block",
+          "button_label": "Add Tile",
+          "sub_fields": [
+              {
+                  "key": "field_5ae7a4312477f",
+                  "label": "Carousel Slider",
+                  "name": "carouselSlider",
+                  "type": "repeater",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "collapsed": "field_5ae7a43124780",
+                  "min": 0,
+                  "max": 0,
+                  "layout": "row",
+                  "button_label": "Add Slider",
+                  "sub_fields": [
+                      {
+                          "key": "field_5ae9f7ca88ce7",
+                          "label": "Image & Text",
+                          "name": "",
+                          "type": "tab",
+                          "instructions": "",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "placement": "top",
+                          "endpoint": 0
+                      },
+                      {
+                          "key": "field_5ae7a43124780",
+                          "label": "Image",
+                          "name": "image",
+                          "type": "image",
+                          "instructions": "",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "return_format": "url",
+                          "preview_size": "thumbnail",
+                          "library": "all",
+                          "min_width": 640,
+                          "min_height": 310,
+                          "min_size": "",
+                          "max_width": "",
+                          "max_height": "",
+                          "max_size": "",
+                          "mime_types": ""
+                      },
+                      {
+                          "key": "field_5af4cdaecfea2",
+                          "label": "Image Option",
+                          "name": "sliderImgOption",
+                          "type": "radio",
+                          "instructions": "",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "choices": {
+                              "is-bg-contain": "Contain Image",
+                              "is-bg-cover": "Expand Image to Cover"
+                          },
+                          "other_choice": 0,
+                          "save_other_choice": 0,
+                          "default_value": "is-bg-cover",
+                          "layout": "horizontal",
+                          "allow_null": 0,
+                          "return_format": "value"
+                      },
+                      {
+                          "key": "field_5ae9f64088ce2",
+                          "label": "Title",
+                          "name": "title",
+                          "type": "textarea",
+                          "instructions": "",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "default_value": "<strong>BOLD WORDS GOES HERE<\/strong>\n\t\t\t\t\t\tREGULAR WORDS GO HERE",
+                          "placeholder": "",
+                          "maxlength": "",
+                          "rows": 2,
+                          "new_lines": "br",
+                          "readonly": 0,
+                          "disabled": 0
+                      },
+                      {
+                          "key": "field_5af5b7b9f9552",
+                          "label": "Font Color",
+                          "name": "fontColor",
+                          "type": "radio",
+                          "instructions": "",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "choices": {
+                              "has-text-white": "White",
+                              "has-text-primary": "Dark"
+                          },
+                          "other_choice": 0,
+                          "save_other_choice": 0,
+                          "default_value": "has-text-white",
+                          "layout": "vertical",
+                          "allow_null": 0,
+                          "return_format": "value"
+                      },
+                      {
+                          "key": "field_5ae9f6c788ce3",
+                          "label": "Regular Copy",
+                          "name": "regularCopy",
+                          "type": "textarea",
+                          "instructions": "",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "default_value": "Regular copy can go here with <strong>bold<\/strong> words here.",
+                          "placeholder": "",
+                          "maxlength": "",
+                          "rows": 2,
+                          "new_lines": "br",
+                          "readonly": 0,
+                          "disabled": 0
+                      },
+                      {
+                          "key": "field_5ae9f7f488ce8",
+                          "label": "CTA",
+                          "name": "",
+                          "type": "tab",
+                          "instructions": "",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "placement": "top",
+                          "endpoint": 0
+                      },
+                      {
+                          "key": "field_5ae9f73d88ce4",
+                          "label": "CTA Primary",
+                          "name": "ctaOne",
+                          "type": "text",
+                          "instructions": "Enter Call To Action",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "default_value": "Call To Action",
+                          "placeholder": "",
+                          "prepend": "",
+                          "append": "",
+                          "maxlength": "",
+                          "readonly": 0,
+                          "disabled": 0
+                      },
+                      {
+                          "key": "field_5ae7a43124782",
+                          "label": "CTA Primary Link",
+                          "name": "ctaOneLink",
+                          "type": "text",
+                          "instructions": "Enter a URL to link to",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "default_value": "\/\/",
+                          "placeholder": "",
+                          "prepend": "https:",
+                          "append": "",
+                          "maxlength": "",
+                          "readonly": 0,
+                          "disabled": 0
+                      },
+                      {
+                          "key": "field_5ae9f78488ce5",
+                          "label": "CTA Secondary",
+                          "name": "ctaTwo",
+                          "type": "text",
+                          "instructions": "Enter Call To Action",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "default_value": "Call To Action",
+                          "placeholder": "",
+                          "prepend": "",
+                          "append": "",
+                          "maxlength": "",
+                          "readonly": 0,
+                          "disabled": 0
+                      },
+                      {
+                          "key": "field_5ae9f79488ce6",
+                          "label": "CTA Secondary Link",
+                          "name": "ctaTwoLink",
+                          "type": "text",
+                          "instructions": "Enter a URL to link to",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "default_value": "",
+                          "placeholder": "\/\/",
+                          "prepend": "https:",
+                          "append": "",
+                          "maxlength": "",
+                          "readonly": 0,
+                          "disabled": 0
+                      },
+                      {
+                          "key": "field_5af4bc1f5fdd1",
+                          "label": "Slide Background",
+                          "name": "",
+                          "type": "tab",
+                          "instructions": "",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "placement": "top",
+                          "endpoint": 0
+                      },
+                      {
+                          "key": "field_5af4bc355fdd2",
+                          "label": "slideBgColor",
+                          "name": "slideBgColor",
+                          "type": "select",
+                          "instructions": "",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "choices": {
+                              "has-background-white": "None",
+                              "has-background-hero-sloped": "Hero Sloped",
+                              "has-background-hero-sloped-reverse": "Hero Sloped Reverse",
+                              "has-background-gray-sloped": "Gray Sloped",
+                              "has-background-gray-sloped-reverse": "Gray Sloped Reverse",
+                              "has-background-teal-sloped": "Teal Sloped",
+                              "has-background-teal-sloped-reverse": "Teal Reverse",
+                              "has-background-popin": "POPin Teal",
+                              "has-background-popin-blue": "POPin Dark Blue",
+                              "has-background-popin-purp": "POPin Purp"
+                          },
+                          "default_value": [
+                              0
+                          ],
+                          "allow_null": 0,
+                          "multiple": 0,
+                          "ui": 0,
+                          "ajax": 0,
+                          "placeholder": "",
+                          "disabled": 0,
+                          "readonly": 0,
+                          "return_format": "value"
+                      },
+                      {
+                          "key": "field_5af4bc405fdd3",
+                          "label": "slideBgOpacity",
+                          "name": "slideBgOpacity",
+                          "type": "radio",
+                          "instructions": "Range: 0.0 - 1",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "choices": {
+                              "0.25": "25%",
+                              "0.50": "50%",
+                              "0.75": "75%"
+                          },
+                          "other_choice": 1,
+                          "save_other_choice": 0,
+                          "default_value": "0.50",
+                          "layout": "horizontal",
+                          "allow_null": 0,
+                          "return_format": "value"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "key": "field_5ae8064579ff3",
+          "label": "Stacked Tile",
+          "name": "",
+          "type": "tab",
+          "instructions": "Select type of tile you want to be on the main view",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "placement": "left",
+          "endpoint": 0
+      },
+      {
+          "key": "field_5b6a8abf56595",
+          "label": "Stacked Tile Right",
+          "name": "stackedTileRight",
+          "type": "true_false",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "message": "Enable",
+          "default_value": 1,
+          "ui": 0,
+          "ui_on_text": "",
+          "ui_off_text": ""
+      },
+      {
+          "key": "field_5ae7ac93c3115",
+          "label": "Stacked Tile",
+          "name": "stackedTile",
+          "type": "repeater",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": [
+              [
+                  {
+                      "field": "field_5b6a8abf56595",
+                      "operator": "==",
+                      "value": "1"
+                  }
+              ]
+          ],
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "collapsed": "field_5ae7ac93c3117",
+          "min": 3,
+          "max": 6,
+          "layout": "block",
+          "button_label": "Add Row",
+          "sub_fields": [
+              {
+                  "key": "field_5ae7ac93c3117",
+                  "label": "Figure",
+                  "name": "figure",
+                  "type": "image",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "return_format": "url",
+                  "preview_size": "thumbnail",
+                  "library": "all",
+                  "min_width": "",
+                  "min_height": "",
+                  "min_size": "",
+                  "max_width": "",
+                  "max_height": "",
+                  "max_size": "",
+                  "mime_types": ""
+              },
+              {
+                  "key": "field_5af1151243132",
+                  "label": "Figure Option",
+                  "name": "figureOption",
+                  "type": "radio",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "choices": {
+                      "is-bg-cover": "cover",
+                      "is-bg-contain": "contain"
+                  },
+                  "other_choice": 0,
+                  "save_other_choice": 0,
+                  "default_value": "is-bg-cover",
+                  "layout": "horizontal",
+                  "allow_null": 0,
+                  "return_format": "value"
+              },
+              {
+                  "key": "field_5af53469a900f",
+                  "label": "Figure Border",
+                  "name": "figureBorder",
+                  "type": "radio",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "choices": {
+                      "has-border-all": "Borders",
+                      "has-border-none": "No Borders"
+                  },
+                  "other_choice": 0,
+                  "save_other_choice": 0,
+                  "default_value": "has-border-all",
+                  "layout": "horizontal",
+                  "allow_null": 0,
+                  "return_format": "value"
+              },
+              {
+                  "key": "field_5af53698a9010",
+                  "label": "Figure Shape",
+                  "name": "figureShape",
+                  "type": "radio",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "choices": {
+                      "button is-rounded": "Round",
+                      "is-squared": "Square\/Rectangle"
+                  },
+                  "other_choice": 0,
+                  "save_other_choice": 0,
+                  "default_value": "button is-rounded",
+                  "layout": "horizontal",
+                  "allow_null": 0,
+                  "return_format": "value"
+              },
+              {
+                  "key": "field_5ae7ac93c3116",
+                  "label": "Title",
+                  "name": "title",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "default_value": "",
+                  "placeholder": "Enter a Title",
+                  "prepend": "",
+                  "append": "",
+                  "maxlength": "",
+                  "readonly": 0,
+                  "disabled": 0
+              },
+              {
+                  "key": "field_5ae7ac93c3118",
+                  "label": "Description",
+                  "name": "description",
+                  "type": "textarea",
+                  "instructions": "Enter copy here",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "default_value": "",
+                  "placeholder": "",
+                  "maxlength": "",
+                  "rows": 2,
+                  "new_lines": "br",
+                  "readonly": 0,
+                  "disabled": 0
+              },
+              {
+                  "key": "field_5aea1e694a254",
+                  "label": "URL",
+                  "name": "url",
+                  "type": "text",
+                  "instructions": "enter url for tile to link to",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "default_value": "https:\/\/www.popinnow.com",
+                  "placeholder": "",
+                  "prepend": "https:\/\/",
+                  "append": "",
+                  "maxlength": "",
+                  "readonly": 0,
+                  "disabled": 0
+              }
+          ]
+      },
+      {
+          "key": "field_5af10822521d3",
+          "label": "Section Options",
+          "name": "",
+          "type": "tab",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": [
+              [
+                  {
+                      "field": "field_5b6a8abf56595",
+                      "operator": "==",
+                      "value": "1"
+                  }
+              ]
+          ],
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "placement": "top",
+          "endpoint": 0
+      },
+      {
+          "key": "field_5af10785521d0",
+          "label": "Background Option",
+          "name": "bgOption",
+          "type": "radio",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": [
+              [
+                  {
+                      "field": "field_5b6a8abf56595",
+                      "operator": "==",
+                      "value": "1"
+                  }
+              ]
+          ],
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "choices": {
+              "image": "Upload Image",
+              "color": "Select Colors"
+          },
+          "allow_null": 0,
+          "other_choice": 0,
+          "default_value": "color",
+          "layout": "horizontal",
+          "return_format": "value",
+          "save_other_choice": 0
+      },
+      {
+          "key": "field_5af10789521d1",
+          "label": "Background Image",
+          "name": "bgImg",
+          "type": "image",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": [
+              [
+                  {
+                      "field": "field_5af10785521d0",
+                      "operator": "==",
+                      "value": "image"
+                  },
+                  {
+                      "field": "field_5b6a8abf56595",
+                      "operator": "==",
+                      "value": "1"
+                  }
+              ]
+          ],
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "return_format": "url",
+          "preview_size": "thumbnail",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": ""
+      },
+      {
+          "key": "field_5af5321400782",
+          "label": "Background Image Opacity",
+          "name": "bgImgOpacity",
+          "type": "radio",
+          "instructions": "Range: 0.0 - 1",
+          "required": 0,
+          "conditional_logic": [
+              [
+                  {
+                      "field": "field_5af10785521d0",
+                      "operator": "==",
+                      "value": "image"
+                  },
+                  {
+                      "field": "field_5b6a8abf56595",
+                      "operator": "==",
+                      "value": "1"
+                  }
+              ]
+          ],
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "choices": {
+              "0.25": "25%",
+              "0.50": "50%",
+              "0.75": "75%"
+          },
+          "allow_null": 0,
+          "other_choice": 1,
+          "save_other_choice": 0,
+          "default_value": "0.50",
+          "layout": "vertical",
+          "return_format": "value"
+      },
+      {
+          "key": "field_5af1078d521d2",
+          "label": "Background Color",
+          "name": "bgColor",
+          "type": "select",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": [
+              [
+                  {
+                      "field": "field_5af10785521d0",
+                      "operator": "==",
+                      "value": "color"
+                  },
+                  {
+                      "field": "field_5b6a8abf56595",
+                      "operator": "==",
+                      "value": "1"
+                  }
+              ]
+          ],
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "choices": {
+              "has-background-white": "None",
+              "has-background-hero-sloped": "Hero Sloped",
+              "has-background-hero-sloped-reverse": "Hero Sloped Reverse",
+              "has-background-gray-sloped": "Gray Sloped",
+              "has-background-gray-sloped-reverse": "Gray Sloped Reverse",
+              "has-background-teal-sloped": "Teal Sloped",
+              "has-background-teal-sloped-reverse": "Teal Reverse",
+              "has-background-popin": "POPin Teal",
+              "has-background-popin-blue": "POPin Dark Blue",
+              "has-background-popin-purp": "POPin Purp"
+          },
+          "default_value": [
+              0
+          ],
+          "allow_null": 1,
+          "multiple": 0,
+          "ui": 0,
+          "return_format": "value",
+          "ajax": 0,
+          "placeholder": ""
+      },
+      {
+          "key": "field_5ae805e60a8f7",
+          "label": "Main Tile",
+          "name": "",
+          "type": "tab",
+          "instructions": "Select type of tile you want to be on the main view",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "placement": "left",
+          "endpoint": 0
+      },
+      {
+          "key": "field_5ae80b4a70aa0",
+          "label": "Main Tile",
+          "name": "mainTile",
+          "type": "repeater",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "collapsed": "field_5ae7a4312477f",
+          "min": 0,
+          "max": 0,
+          "layout": "block",
+          "button_label": "Add Tile",
+          "sub_fields": [
+              {
+                  "key": "field_5ae7a4312477f",
+                  "label": "Carousel Slider",
+                  "name": "carouselSlider",
+                  "type": "repeater",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "collapsed": "field_5ae7a43124780",
+                  "min": 0,
+                  "max": 0,
+                  "layout": "row",
+                  "button_label": "Add Slider",
+                  "sub_fields": [
+                      {
+                          "key": "field_5ae9f7ca88ce7",
+                          "label": "Image & Text",
+                          "name": "",
+                          "type": "tab",
+                          "instructions": "",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "placement": "top",
+                          "endpoint": 0
+                      },
+                      {
+                          "key": "field_5ae7a43124780",
+                          "label": "Image",
+                          "name": "image",
+                          "type": "image",
+                          "instructions": "",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "return_format": "url",
+                          "preview_size": "thumbnail",
+                          "library": "all",
+                          "min_width": 640,
+                          "min_height": 310,
+                          "min_size": "",
+                          "max_width": "",
+                          "max_height": "",
+                          "max_size": "",
+                          "mime_types": ""
+                      },
+                      {
+                          "key": "field_5af4cdaecfea2",
+                          "label": "Image Option",
+                          "name": "sliderImgOption",
+                          "type": "radio",
+                          "instructions": "",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "choices": {
+                              "is-bg-contain": "Contain Image",
+                              "is-bg-cover": "Expand Image to Cover"
+                          },
+                          "other_choice": 0,
+                          "save_other_choice": 0,
+                          "default_value": "is-bg-cover",
+                          "layout": "horizontal",
+                          "allow_null": 0,
+                          "return_format": "value"
+                      },
+                      {
+                          "key": "field_5ae9f64088ce2",
+                          "label": "Title",
+                          "name": "title",
+                          "type": "textarea",
+                          "instructions": "",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "default_value": "<strong>BOLD WORDS GOES HERE<\/strong>\n\t\t\t\t\t\tREGULAR WORDS GO HERE",
+                          "placeholder": "",
+                          "maxlength": "",
+                          "rows": 2,
+                          "new_lines": "br",
+                          "readonly": 0,
+                          "disabled": 0
+                      },
+                      {
+                          "key": "field_5af5b7b9f9552",
+                          "label": "Font Color",
+                          "name": "fontColor",
+                          "type": "radio",
+                          "instructions": "",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "choices": {
+                              "has-text-white": "White",
+                              "has-text-primary": "Dark"
+                          },
+                          "other_choice": 0,
+                          "save_other_choice": 0,
+                          "default_value": "has-text-white",
+                          "layout": "vertical",
+                          "allow_null": 0,
+                          "return_format": "value"
+                      },
+                      {
+                          "key": "field_5ae9f6c788ce3",
+                          "label": "Regular Copy",
+                          "name": "regularCopy",
+                          "type": "textarea",
+                          "instructions": "",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "default_value": "Regular copy can go here with <strong>bold<\/strong> words here.",
+                          "placeholder": "",
+                          "maxlength": "",
+                          "rows": 2,
+                          "new_lines": "br",
+                          "readonly": 0,
+                          "disabled": 0
+                      },
+                      {
+                          "key": "field_5ae9f7f488ce8",
+                          "label": "CTA",
+                          "name": "",
+                          "type": "tab",
+                          "instructions": "",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "placement": "top",
+                          "endpoint": 0
+                      },
+                      {
+                          "key": "field_5ae9f73d88ce4",
+                          "label": "CTA Primary",
+                          "name": "ctaOne",
+                          "type": "text",
+                          "instructions": "Enter Call To Action",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "default_value": "Call To Action",
+                          "placeholder": "",
+                          "prepend": "",
+                          "append": "",
+                          "maxlength": "",
+                          "readonly": 0,
+                          "disabled": 0
+                      },
+                      {
+                          "key": "field_5ae7a43124782",
+                          "label": "CTA Primary Link",
+                          "name": "ctaOneLink",
+                          "type": "text",
+                          "instructions": "Enter a URL to link to",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "default_value": "\/\/",
+                          "placeholder": "",
+                          "prepend": "https:",
+                          "append": "",
+                          "maxlength": "",
+                          "readonly": 0,
+                          "disabled": 0
+                      },
+                      {
+                          "key": "field_5ae9f78488ce5",
+                          "label": "CTA Secondary",
+                          "name": "ctaTwo",
+                          "type": "text",
+                          "instructions": "Enter Call To Action",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "default_value": "Call To Action",
+                          "placeholder": "",
+                          "prepend": "",
+                          "append": "",
+                          "maxlength": "",
+                          "readonly": 0,
+                          "disabled": 0
+                      },
+                      {
+                          "key": "field_5ae9f79488ce6",
+                          "label": "CTA Secondary Link",
+                          "name": "ctaTwoLink",
+                          "type": "text",
+                          "instructions": "Enter a URL to link to",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "default_value": "",
+                          "placeholder": "\/\/",
+                          "prepend": "https:",
+                          "append": "",
+                          "maxlength": "",
+                          "readonly": 0,
+                          "disabled": 0
+                      },
+                      {
+                          "key": "field_5af4bc1f5fdd1",
+                          "label": "Slide Background",
+                          "name": "",
+                          "type": "tab",
+                          "instructions": "",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "placement": "top",
+                          "endpoint": 0
+                      },
+                      {
+                          "key": "field_5af4bc355fdd2",
+                          "label": "slideBgColor",
+                          "name": "slideBgColor",
+                          "type": "select",
+                          "instructions": "",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "choices": {
+                              "has-background-white": "None",
+                              "has-background-hero-sloped": "Hero Sloped",
+                              "has-background-hero-sloped-reverse": "Hero Sloped Reverse",
+                              "has-background-gray-sloped": "Gray Sloped",
+                              "has-background-gray-sloped-reverse": "Gray Sloped Reverse",
+                              "has-background-teal-sloped": "Teal Sloped",
+                              "has-background-teal-sloped-reverse": "Teal Reverse",
+                              "has-background-popin": "POPin Teal",
+                              "has-background-popin-blue": "POPin Dark Blue",
+                              "has-background-popin-purp": "POPin Purp"
+                          },
+                          "default_value": [
+                              0
+                          ],
+                          "allow_null": 0,
+                          "multiple": 0,
+                          "ui": 0,
+                          "ajax": 0,
+                          "placeholder": "",
+                          "disabled": 0,
+                          "readonly": 0,
+                          "return_format": "value"
+                      },
+                      {
+                          "key": "field_5af4bc405fdd3",
+                          "label": "slideBgOpacity",
+                          "name": "slideBgOpacity",
+                          "type": "radio",
+                          "instructions": "Range: 0.0 - 1",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "choices": {
+                              "0.25": "25%",
+                              "0.50": "50%",
+                              "0.75": "75%"
+                          },
+                          "other_choice": 1,
+                          "save_other_choice": 0,
+                          "default_value": "0.50",
+                          "layout": "horizontal",
+                          "allow_null": 0,
+                          "return_format": "value"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "key": "field_5ae8064579ff3",
+          "label": "Stacked Tile",
+          "name": "",
+          "type": "tab",
+          "instructions": "Select type of tile you want to be on the main view",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "placement": "left",
+          "endpoint": 0
+      },
+      {
+          "key": "field_5b6a8abf56595",
+          "label": "Stacked Tile Right",
+          "name": "stackedTileRight",
+          "type": "true_false",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "message": "Enable",
+          "default_value": 1,
+          "ui": 0,
+          "ui_on_text": "",
+          "ui_off_text": ""
+      },
+      {
+          "key": "field_5ae7ac93c3115",
+          "label": "Stacked Tile",
+          "name": "stackedTile",
+          "type": "repeater",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": [
+              [
+                  {
+                      "field": "field_5b6a8abf56595",
+                      "operator": "==",
+                      "value": "1"
+                  }
+              ]
+          ],
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "collapsed": "field_5ae7ac93c3117",
+          "min": 3,
+          "max": 6,
+          "layout": "block",
+          "button_label": "Add Row",
+          "sub_fields": [
+              {
+                  "key": "field_5ae7ac93c3117",
+                  "label": "Figure",
+                  "name": "figure",
+                  "type": "image",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "return_format": "url",
+                  "preview_size": "thumbnail",
+                  "library": "all",
+                  "min_width": "",
+                  "min_height": "",
+                  "min_size": "",
+                  "max_width": "",
+                  "max_height": "",
+                  "max_size": "",
+                  "mime_types": ""
+              },
+              {
+                  "key": "field_5af1151243132",
+                  "label": "Figure Option",
+                  "name": "figureOption",
+                  "type": "radio",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "choices": {
+                      "is-bg-cover": "cover",
+                      "is-bg-contain": "contain"
+                  },
+                  "other_choice": 0,
+                  "save_other_choice": 0,
+                  "default_value": "is-bg-cover",
+                  "layout": "horizontal",
+                  "allow_null": 0,
+                  "return_format": "value"
+              },
+              {
+                  "key": "field_5af53469a900f",
+                  "label": "Figure Border",
+                  "name": "figureBorder",
+                  "type": "radio",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "choices": {
+                      "has-border-all": "Borders",
+                      "has-border-none": "No Borders"
+                  },
+                  "other_choice": 0,
+                  "save_other_choice": 0,
+                  "default_value": "has-border-all",
+                  "layout": "horizontal",
+                  "allow_null": 0,
+                  "return_format": "value"
+              },
+              {
+                  "key": "field_5af53698a9010",
+                  "label": "Figure Shape",
+                  "name": "figureShape",
+                  "type": "radio",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "choices": {
+                      "button is-rounded": "Round",
+                      "is-squared": "Square\/Rectangle"
+                  },
+                  "other_choice": 0,
+                  "save_other_choice": 0,
+                  "default_value": "button is-rounded",
+                  "layout": "horizontal",
+                  "allow_null": 0,
+                  "return_format": "value"
+              },
+              {
+                  "key": "field_5ae7ac93c3116",
+                  "label": "Title",
+                  "name": "title",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "default_value": "",
+                  "placeholder": "Enter a Title",
+                  "prepend": "",
+                  "append": "",
+                  "maxlength": "",
+                  "readonly": 0,
+                  "disabled": 0
+              },
+              {
+                  "key": "field_5ae7ac93c3118",
+                  "label": "Description",
+                  "name": "description",
+                  "type": "textarea",
+                  "instructions": "Enter copy here",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "default_value": "",
+                  "placeholder": "",
+                  "maxlength": "",
+                  "rows": 2,
+                  "new_lines": "br",
+                  "readonly": 0,
+                  "disabled": 0
+              },
+              {
+                  "key": "field_5aea1e694a254",
+                  "label": "URL",
+                  "name": "url",
+                  "type": "text",
+                  "instructions": "enter url for tile to link to",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "default_value": "https:\/\/www.popinnow.com",
+                  "placeholder": "",
+                  "prepend": "https:\/\/",
+                  "append": "",
+                  "maxlength": "",
+                  "readonly": 0,
+                  "disabled": 0
+              }
+          ]
+      },
+      {
+          "key": "field_5af10822521d3",
+          "label": "Section Options",
+          "name": "",
+          "type": "tab",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": [
+              [
+                  {
+                      "field": "field_5b6a8abf56595",
+                      "operator": "==",
+                      "value": "1"
+                  }
+              ]
+          ],
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "placement": "top",
+          "endpoint": 0
+      },
+      {
+          "key": "field_5af10785521d0",
+          "label": "Background Option",
+          "name": "bgOption",
+          "type": "radio",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": [
+              [
+                  {
+                      "field": "field_5b6a8abf56595",
+                      "operator": "==",
+                      "value": "1"
+                  }
+              ]
+          ],
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "choices": {
+              "image": "Upload Image",
+              "color": "Select Colors"
+          },
+          "allow_null": 0,
+          "other_choice": 0,
+          "default_value": "color",
+          "layout": "horizontal",
+          "return_format": "value",
+          "save_other_choice": 0
+      },
+      {
+          "key": "field_5af10789521d1",
+          "label": "Background Image",
+          "name": "bgImg",
+          "type": "image",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": [
+              [
+                  {
+                      "field": "field_5af10785521d0",
+                      "operator": "==",
+                      "value": "image"
+                  },
+                  {
+                      "field": "field_5b6a8abf56595",
+                      "operator": "==",
+                      "value": "1"
+                  }
+              ]
+          ],
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "return_format": "url",
+          "preview_size": "thumbnail",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": ""
+      },
+      {
+          "key": "field_5af5321400782",
+          "label": "Background Image Opacity",
+          "name": "bgImgOpacity",
+          "type": "radio",
+          "instructions": "Range: 0.0 - 1",
+          "required": 0,
+          "conditional_logic": [
+              [
+                  {
+                      "field": "field_5af10785521d0",
+                      "operator": "==",
+                      "value": "image"
+                  },
+                  {
+                      "field": "field_5b6a8abf56595",
+                      "operator": "==",
+                      "value": "1"
+                  }
+              ]
+          ],
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "choices": {
+              "0.25": "25%",
+              "0.50": "50%",
+              "0.75": "75%"
+          },
+          "allow_null": 0,
+          "other_choice": 1,
+          "save_other_choice": 0,
+          "default_value": "0.50",
+          "layout": "vertical",
+          "return_format": "value"
+      },
+      {
+          "key": "field_5af1078d521d2",
+          "label": "Background Color",
+          "name": "bgColor",
+          "type": "select",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": [
+              [
+                  {
+                      "field": "field_5af10785521d0",
+                      "operator": "==",
+                      "value": "color"
+                  },
+                  {
+                      "field": "field_5b6a8abf56595",
+                      "operator": "==",
+                      "value": "1"
+                  }
+              ]
+          ],
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "choices": {
+              "has-background-white": "None",
+              "has-background-hero-sloped": "Hero Sloped",
+              "has-background-hero-sloped-reverse": "Hero Sloped Reverse",
+              "has-background-gray-sloped": "Gray Sloped",
+              "has-background-gray-sloped-reverse": "Gray Sloped Reverse",
+              "has-background-teal-sloped": "Teal Sloped",
+              "has-background-teal-sloped-reverse": "Teal Reverse",
+              "has-background-popin": "POPin Teal",
+              "has-background-popin-blue": "POPin Dark Blue",
+              "has-background-popin-purp": "POPin Purp"
+          },
+          "default_value": [
+              0
+          ],
+          "allow_null": 1,
+          "multiple": 0,
+          "ui": 0,
+          "return_format": "value",
+          "ajax": 0,
+          "placeholder": ""
+      }
+  ],
+  "min": "",
+  "max": ""
+},

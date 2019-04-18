@@ -1,0 +1,58 @@
+*[data-module="component-auto-tenant"]
+  &.is-overlay
+    // display: none
+    z-index: -1
+    &.is-active
+      display: block
+      position: fixed
+      z-index: 9999
+      animation: fadeIn .75s linear
+  .box
+    &.is-hoverable
+      animation: lilEaseOut .75s linear
+  
+  .auto-tenant-demo
+    .input
+      &.pop-validation
+        &.is-success
+          &.is-danger
+            border-color: #23d160
+
+    .field
+      margin-bottom: 0rem
+      &:not(:last-child)
+        margin-bottom: 0rem
+      .control
+        .help
+          margin-bottom: 0.25rem
+          &.is-success
+            display: none
+          &.is-active
+            visibility: visible
+          &:not(.is-active)
+            visibility: hidden
+
+  
+@keyframes lilEaseOut
+  0%
+    opacity: 1
+  50%
+    opacity: .25
+  100%
+    opacity: .75
+
+@keyframes fadeOut
+  0%
+    opacity: 1
+  50%
+    opacity: .25
+  100%
+    opacity: 0
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+  50%
+    opacity: .75
+  100%
+    opacity: 1

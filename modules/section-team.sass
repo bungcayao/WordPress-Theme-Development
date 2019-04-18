@@ -1,0 +1,49 @@
+//  Module: Section Carousel
+
+.section-team
+  .container
+    .columns
+      .column
+        position: relative
+        padding: 0
+
+        figure
+          background-color: $white
+          background-repeat: no-repeat
+          background-position: 50% 50%
+          background-size: cover
+          margin-bottom: 1rem !important
+
+          &.is-190x190
+            width: 190px
+            height: 190px
+            +mobile
+              margin-bottom: 190px * 0.5 !important
+
+          .has-content
+            display: none
+            width: 190px
+            height: auto
+            position: relative
+            +mobile
+              display: block
+              top: 190px * .65 !important
+            
+
+        &.is-hoverable
+          opacity: 1 !important
+          &:hover
+            figure
+              background-image: none !important
+              +mobile
+                background-image: initial
+              background-color: rgba(25,169,229,0.95)
+              +mobile
+                background-color: transparent
+
+              .has-content
+                display: block
+                p
+                  color: $white
+                  +mobile
+                    color: $primary

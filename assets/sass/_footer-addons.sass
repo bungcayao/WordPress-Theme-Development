@@ -1,0 +1,119 @@
+//$footer-background-color: $background !default
+$menu-item-color: $white
+$menu-item-hover-color: darken($white, 25%)
+//$menu-item-hover-background-color: $background !default
+//$menu-item-active-color: $link-invert !default
+$menu-item-active-background-color: $popin-blue
+//$menu-list-border-left: 1px solid $border !default
+//$menu-label-color: $text-light !default
+
+footer
+  // add styles here
+
+  &.footer
+    // background-color: $footer-background-color
+    padding: 3rem 0 6rem
+
+    // Sizes
+    &.is-small
+      font-size: $size-small
+    &.is-medium
+      font-size: $size-medium
+    &.is-large
+      font-size: $size-large
+
+    .social-media
+      .has-gap
+        margin-left: 10px
+        margin-right: 10px
+
+        &:first-child
+          margin-left: 0
+
+        &:last-child
+          margin-right: 0
+
+    // @package popin -> WordPress Theme Structure
+    // Try setting up Footer Styling and Structure...
+    // based off of Menu
+    // ref -> https://bulma.io/documentation/components/menu/
+    .sitemap
+      // padding-bottom: 0.75rem
+      font-size: $size-normal
+
+      li.sitemap-list
+        font-weight: $weight-semibold
+        line-height: 1.5
+
+        a.sitemap-link
+          color: $mono-gray-4
+          padding: 0em 0.75em
+          justify-content: center
+          text-align: center
+
+
+          &:hover
+            color: $mono-gray-5
+            // background-color: $menu-item-hover-background-color
+
+        &.is-active
+          color: $menu-item-active-color
+          background-color: $menu-item-active-background-color
+          // a.sitemap-link
+
+        &.has-dropdown
+          display: block
+          text-align: center
+          +mobile
+            display: flex
+            &:hover
+              display: block
+
+          ul.sitemap-dropdown
+            &:hover
+              // background-color: lighten($footer-background-color, 10%);
+              color: $white; // $menu-item-hover-color
+
+            li.sitemap-list,
+            a.sitemap-link
+              text-align: center
+              margin-bottom: 0
+
+            li.sitemap-list
+              +opa
+              &:hover
+                background-color: $menu-item-hover-background-color
+                +opa-hov
+              a.sitemap-link
+                font-weight: $weight-normal
+                color: darken($white, 50%)
+                  line-height: 0.75
+
+              &.is-active
+                color: $menu-item-active-color
+                background-color: $menu-item-active-background-color
+
+                // a.sitemap-link
+                  //color: $menu-item-active-color
+                  //background-color: $menu-item-active-background-color
+
+          // Mobile Responsiveness
+          // Different UX for dropdown lists
+          +mobile
+            &.is-hoverable
+              // add styles here
+              a.sitemap-link
+                // add styles here
+              ul.sitemap-dropdown
+                display: none
+                li.sitemap-list
+                  // add styles here
+                  a.sitemap-link
+                  // add styles here
+                  &.is-active
+                    // add styles here
+                    a.sitemap-link
+                    // add styles here
+            &:hover
+              ul.sitemap-dropdown
+                display: block

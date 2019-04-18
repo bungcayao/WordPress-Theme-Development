@@ -1,0 +1,292 @@
+// @helpers/utilities
+
+
+// Footer
+// If there's not enough content for the browser to scroll,
+// the color of the page will not match the footer color.
+// This is one solve, by making the <html> the same color
+// as the footer, and makeing sure the body || #page is $white.
+html
+  // Set BG to be same as Footer
+  background-color: $footer-background-color;
+  // WordPress -> Page ID
+  #page
+    background-color: $white;
+
+// Navbar
+// IF using .is-fixed-top && .is-transparent on the <navbar>
+// and applying a .has-fixed-navbar-top on <html> or <body>,
+// THEN we get a bug were the background behind the navbar is white.
+// FIX -> Apply $navbar-height to first child of #content.site-content
+
+html,
+body
+  &.has-navbar-fixed-top
+    margin: 0
+    padding: 0
+
+  .navbar
+    &.is-primary
+      &.is-transparent
+        background: transparent
+
+  #content
+    &.site-content
+      section
+        &:first-child
+          padding-top: ($navbar-height * 1.5)
+          +mobile
+            padding-top: 0
+
+=has-bg-image  
+  background-repeat: no-repeat !important
+  background-position: 50% 50% 
+  background-size: cover
+
+=bg-position($x, $y)
+  &.is-#{$x}-#{$y}
+    background-position: $x $y
+
+  // Elements with BG Image
+.has-bg-image
+  +has-bg-image  
+  // Contained
+  &.is-bg-contain
+    background-size: contain !important
+  // Cover  
+  &.is-bg-cover
+    background-size: cover  !important
+  // Background Position  
+  +bg-position(center, top)
+  +bg-position(left, top)    
+  +bg-position(right, top)    
+  +bg-position(center, center)    
+  +bg-position(left, center)    
+  +bg-position(right, center)    
+  +bg-position(center, bottom)    
+  +bg-position(left, bottom)    
+  +bg-position(right, bottom)  
+
+  &.is-bg-fixed
+    background-attachment: fixed
+
+  &.is-bg-scroll
+    background-attachment: scroll
+  
+  &.is-bg-scroll-local    
+    background-attachment: local
+
+  &.button
+    //remove cursor pointer
+    user-select: unset
+    cursor: default
+
+// Font Family Rules  
+.is-fontfamily-share
+  font-family: $family-header !important
+  &.title
+  font-size: $size-1
+
+.is-fontfamily-serif
+  font-family: $family-serif !important
+  &.title
+  font-size: $size-4
+  font-weight: $weight-semibold
+
+// Section + Background Overlay Relationsips
+section
+  .content-container
+    z-index: 2
+
+  .bg-overlay-container
+    z-index: 1
+    opacity: 0.75  
+
+// Position Helpers
+.is-position-relative
+  position: relative
+.is-position-absolute      
+  position: absolute
+.is-position-fixed
+  position: fixed
+.is-position-static    
+  position: static
+
+// Borders
+=border($direction, $width, $style, $color)
+  @if $direction == 'all'
+    .has-border-all
+      border: $width $style $color
+  @elseif $direction == 'none'
+    .has-border-none
+      border: $width $style $color    
+  @else
+    .has-border-#{$direction}
+      border-#{$direction}: $width $style $color
+
++border(all, 1px, solid, $grey);
++border(top, 1px, solid, $grey);
++border(bottom, 1px, solid, $grey);
++border(left, 1px, solid, $grey);
++border(right, 1px, solid, $grey);
++border(none, 1px, solid, transparent);
+
+
+// This is a Mixin to make margins and spacing 0
+=spacingless($space, $direction)
+  @if $direction == 'ltr'
+    .is-#{$space}less-#{$direction}
+      #{$space}-left: 0 !important
+      #{$space}-right: 0 !important
+  @elseif $direction == 'ttb'
+    .is-#{$space}less-#{$direction}
+      #{$space}-top: 0 !important
+      #{$space}-bottom: 0 !important
+  @else
+    .is-#{$space}less-#{$direction}
+      #{$space}-#{$direction}: 0 !important
+
+// Here is where we create it.
+// Usage: .is-paddingless-ltr or .is-marginless-ltr
+// ltr -> left-to-right
+// ttb -> top-to-bottom
++spacingless(padding, ltr)
++spacingless(padding, left)
++spacingless(padding, right)
++spacingless(padding, ttb)
++spacingless(padding, top)
++spacingless(padding, bottom)
++spacingless(margin, ltr)
++spacingless(margin, left)
++spacingless(margin, right)
++spacingless(margin, ttb)
++spacingless(margin, top)
++spacingless(margin, bottom)
+
+// Alignment
+.is-centered
+  margin-left: auto !important
+  margin-right: auto !important
+
+// Click Actions
+.is-clickable
+  cursor: pointer !important
+
+.is-not-clickable  
+  cursor: default !important
+
+// Section Backgrounds
+.has-background-hero-sloped
+  background: rgba(0,131,155, 0.75)
+  background: linear-gradient(45deg, #1a90a5 60%, #00839b 40%)
+
+.has-background-hero-sloped-reverse
+  background: rgba(0,131,155, 0.75)
+  background: linear-gradient(-45deg, #1a90a5 60%, #00839b 40%)
+
+.has-background-gray-sloped
+  background: rgba(213,234,239, 0.75)
+  background: linear-gradient(45deg, #edf6f8 60%, #d5eaef 40%)
+
+.has-background-gray-sloped-reverse
+  background: rgba(213,234,239, 0.75)
+  background: linear-gradient(-45deg, #edf6f8 60%, #d5eaef 40%)
+
+.has-background-teal-sloped
+  background: rgba(200,235,236, 0.75)
+  background: linear-gradient(45deg, #c8ebec 60%, #dbf2f3 40%)
+
+.has-background-teal-sloped-reverse
+  background: rgba(200,235,236, 0.75)
+  background: linear-gradient(-45deg, #c8ebec 60%, #dbf2f3 40%)
+
+.is-borderless
+  border-color: transparent !important
+
+.has-broken-words  
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word
+  word-wrap: break-word
+
+  -ms-word-break: break-all
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all
+  /* Instead use this non-standard one: */
+  word-break: break-word
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+
+// Opacity Hover States  
+=opa
+  opacity: 0.75
+  transition: all 0.5s ease-in-out  
+=opa-hov
+  opacity: 1
+  transition: all 0.5s ease-in-out      
+
+// After Element
+=after
+  content: ''
+  display: block
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background: $white
+  z-index: 0    
+
+.is-not-hoverable
+  cursor: default  
+
+// Animation EFX
+.is-hoverable
+  opacity: 0.75
+  +opa
+  &:hover
+    cursor: pointer
+    opacity: 1   
+    +opa-hov
+
+.is-underlined
+  text-decoration: underline
+
+// Overwrite Button SASS
+.button 
+  &.is-text 
+    &:hover 
+      background-color: transparent !important
+  +opa
+  &:hover
+    +opa-hov
+
+
+// TODO
+// This doesn't work
+h1,
+.is-size-1
+  +mobile
+    font-size: 1.75rem !important
+h2,
+.is-size-2
+  +mobile
+    font-size: 1.5rem !important
+h3,
+.is-size-3
+  +mobile
+    font-size: 1.25rem !important
+
+.policy-formatting
+  li
+    margin-bottom: 1rem
+
+// Founders Page
+.section-team
+  .columns
+    &.is-multiline
+      .column
+        margin-bottom: 1rem

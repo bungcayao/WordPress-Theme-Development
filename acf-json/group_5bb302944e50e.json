@@ -1,0 +1,297 @@
+{
+    "key": "group_5bb302944e50e",
+    "title": "Notifications Message (Page)",
+    "fields": [
+        {
+            "key": "field_5bb2aaca2a06b",
+            "label": "Notifications Message Enabled",
+            "name": "notificationsMessageEnabled",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Enable Notification Message?",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5bb284c96f3e3",
+            "label": "Background Color",
+            "name": "notificationsBgColor",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "has-background-white": "None",
+                "has-background-popin-blue-af": "blue-af",
+                "has-background-popin-blue-md": "blue-md",
+                "has-background-popin-med-af": "med-af",
+                "has-background-popin-yellow-af": "yellow-af",
+                "has-background-popin-orange-af": "orange-af"
+            },
+            "allow_null": 0,
+            "other_choice": 1,
+            "save_other_choice": 1,
+            "default_value": "has-background-white",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5bb285316f3e4",
+            "label": "Text Color",
+            "name": "notificationsTxtColor",
+            "type": "radio",
+            "instructions": "has-text-black ||\r\nhas-text-light ||\r\nhas-text-dark ||\r\nhas-text-info ||\r\nhas-text-link ||\r\nhas-text-success ||\r\nhas-text-warning ||\r\nhas-text-danger ||\r\nhas-text-black-bis ||\r\nhas-text-black-ter ||\r\nhas-text-grey-darker ||\r\nhas-text-grey-dark ||\r\nhas-text-grey ||\r\nhas-text-grey-light ||\r\nhas-text-grey-lighter ||\r\nhas-text-white-ter ||\r\nhas-text-white-bis",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "has-text-white": "white",
+                "has-text-primary": "primary"
+            },
+            "allow_null": 0,
+            "other_choice": 1,
+            "save_other_choice": 1,
+            "default_value": "has-text-white : white",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5bb285456f3e5",
+            "label": "Notification Placement",
+            "name": "notificationsPlacement",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "is-not-fixed": "Not Fixed",
+                "notifications-bottom-dock": "Docked Bottom",
+                "notifications-top-dock": "Docked Top",
+                "notifications-bottom-left": "Bottom Left",
+                "notifications-bottom-right": "Bottom Right",
+                "notifications-top-left": "Top Left",
+                "notifications-top-right": "Top Right"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "is-not-fixed",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5bb285876f3e6",
+            "label": "Notification Title",
+            "name": "notificationsTitle",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bb2859a6f3e7",
+            "label": "Notification Content",
+            "name": "notificationsContent",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5bb2a495466a9",
+            "label": "Enable Exit Button",
+            "name": "notificationsEnableExitButton",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Enable `X` button to close notification?",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5bb285ce6f3e8",
+            "label": "Has Button",
+            "name": "notificationsHasButton",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5bb285ef6f3e9",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5bb285ef6f3e9",
+                    "label": "Button Text",
+                    "name": "btnText",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5bb286116f3ea",
+                    "label": "Button Color",
+                    "name": "btnColor",
+                    "type": "radio",
+                    "instructions": "is-black ||\r\nis-light ||\r\nis-dark ||\r\nis-info ||\r\nis-link ||\r\nis-success ||\r\nis-warning ||\r\nis-danger ||\r\nis-black-bis ||\r\nis-black-ter ||\r\nis-grey-darker ||\r\nis-grey-dark ||\r\nis-grey ||\r\nis-grey-light ||\r\nis-grey-lighter ||\r\nis-white-ter ||\r\nis-white-bis",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "is-white": "None",
+                        "is-hero-sloped": "Hero Sloped",
+                        "is-hero-sloped-reverse": "Hero Sloped Reverse",
+                        "is-gray-sloped": "Gray Sloped",
+                        "is-gray-sloped-reverse": "Gray Sloped Reverse",
+                        "is-teal-sloped": "Teal Sloped",
+                        "is-teal-sloped-reverse": "Teal Reverse",
+                        "is-popin": "POPin Teal",
+                        "is-popin-blue": "POPin Dark Blue",
+                        "is-popin-purp": "POPin Purp"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 1,
+                    "save_other_choice": 1,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_5bb2861f6f3eb",
+                    "label": "Button Format",
+                    "name": "btnIsOutlined",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "is-outlined": "outlined",
+                        "is-not-outlined": "solid",
+                        "is-text": "text-only"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "is-not-outlined : solid",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_5bb286456f3ec",
+                    "label": "Button Url",
+                    "name": "btnUrl",
+                    "type": "text",
+                    "instructions": "Put URL or #closeNotification to close out notification.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#closeNotification",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "pages\/modules.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1546897919
+}

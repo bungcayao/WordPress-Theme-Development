@@ -1,0 +1,141 @@
+#!/bin/bash
+
+#
+# Deployment Script
+# @link https://coderwall.com/p/moabdw/using-rsync-to-deploy-a-website-easy-one-liner-command
+# 
+# Deploy to production and staging environments.
+# Deployment to production is possible, since we have a version history of the theme on github.
+#
+
+ERRORSTRING="Error. Please make sure you've indicated correct parameters"
+
+if [ $# -eq 0 ]
+    then
+        echo $ERRORSTRING;
+elif [ $1 == "stage" ]
+    then
+        if [[ -z $2 ]]
+            then
+                echo " "    
+                echo "🙏  🙏  🙏     Creating Build for" $1
+                echo " "    
+                # git clean -fdx
+                # yarn cache clean
+                yarn install
+                yarn build
+                echo " "
+                echo "🙏  🙏  🙏     Deploying to" $1
+                rsync -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p18765" ./ popinnow@popinnow.com:/home/popinnow/staging/1/wp-content/themes/popin/
+        elif [ $2 == "dry-run" ]
+            then
+                echo " "
+                echo "Dry-Run for" $1
+                echo " "    
+                echo "🙏  🙏  🙏     Creating Build for" $1
+                echo " "    
+                # git clean -fdx --dry-run
+                # yarn install --dry-run
+                # yarn build --dry-run
+                echo " "
+                echo "🙏  🙏  🙏     Deploying to" $1
+                echo " "    
+                rsync --dry-run -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p18765" ./ popinnow@popinnow.com:/home/popinnow/staging/1/wp-content/themes/popin/
+        else
+            echo $ERRORSTRING;
+        fi    
+elif [ $1 == "stage2" ]
+    then
+        if [[ -z $2 ]]
+            then
+                echo " "    
+                echo "🙏  🙏  🙏     Creating Build for" $1
+                echo " "    
+                # git clean -fdx
+                # yarn cache clean
+                yarn install
+                yarn build
+                echo " "
+                echo "🙏  🙏  🙏     Deploying to" $1
+                rsync -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p18765" ./ popinnow@popinnow.com:/home/popinnow/staging/2/wp-content/themes/popin/
+        elif [ $2 == "dry-run" ]
+            then
+                echo " "
+                echo "Dry-Run for" $1
+                echo " "    
+                echo "🙏  🙏  🙏     Creating Build for" $1
+                echo " "    
+                # git clean -fdx --dry-run
+                # yarn install --dry-run
+                # yarn build --dry-run
+                echo " "
+                echo "🙏  🙏  🙏     Deploying to" $1
+                echo " "    
+                rsync --dry-run -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p18765" ./ popinnow@popinnow.com:/home/popinnow/staging/2/wp-content/themes/popin/
+        else
+            echo $ERRORSTRING;
+        fi
+
+elif [ $1 == "stage3" ]
+    then
+        if [[ -z $2 ]]
+            then
+                echo " "    
+                echo "🙏  🙏  🙏     Creating Build for" $1
+                echo " "    
+                # git clean -fdx
+                # yarn cache clean
+                yarn install
+                yarn build
+                echo " "
+                echo "🙏  🙏  🙏     Deploying to" $1
+                rsync -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p18765" ./ popinnow@popinnow.com:/home/popinnow/staging/3/wp-content/themes/popin/
+        elif [ $2 == "dry-run" ]
+            then
+                echo " "
+                echo "Dry-Run for" $1
+                echo " "    
+                echo "🙏  🙏  🙏     Creating Build for" $1
+                echo " "    
+                # git clean -fdx --dry-run
+                # yarn install --dry-run
+                # yarn build --dry-run
+                echo " "
+                echo "🙏  🙏  🙏     Deploying to" $1
+                echo " "    
+                rsync --dry-run -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p18765" ./ popinnow@popinnow.com:/home/popinnow/staging/3/wp-content/themes/popin/
+        else
+            echo $ERRORSTRING;
+        fi
+
+elif [ $1 == "prod" ]
+    then
+        if [[ -z $2 ]]
+            then
+                echo " "    
+                echo "🙏  🙏  🙏     Creating Build for" $1
+                echo " "    
+                # git clean -fdx
+                # yarn cache clean
+                yarn install
+                yarn build
+                echo " "  
+                echo "🙏  🙏  🙏     Deploying to" $1
+                rsync -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p18765" ./ popinnow@popinnow.com:/home/popinnow/public_html/wp-content/themes/popin/
+        elif [ $2 == "dry-run" ]
+            then
+                echo " "
+                echo "Dry-Run for" $1
+                echo " "    
+                echo "🙏  🙏  🙏     Creating Build for" $1
+                # git clean -fdx --dry-run
+                # yarn install --dry-run
+                # yarn build --dry-run
+                echo " "
+                echo "🙏  🙏  🙏     Deploying to" $1
+                echo " "    
+                rsync --dry-run -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p18765" ./ popinnow@popinnow.com:/home/popinnow/public_html/wp-content/themes/popin/
+        else
+            echo $ERRORSTRING;
+        fi                         
+fi

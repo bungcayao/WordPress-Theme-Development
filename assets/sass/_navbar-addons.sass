@@ -1,0 +1,319 @@
+
+/*
+ * Navbar Default Configurations
+ * Note:  This can get overwritten in the style.scss file
+ */
+
+/* Navbar Container */
+//$navbar-background-color: $white !default
+//$navbar-height: 3.25rem !default
+//$navbar-fixed-z: 30 !default
+
+/* Navbar Items */
+//$navbar-item-color: $grey-dark !default
+$navbar-item-color: $mono-gray-6;
+//$navbar-item-hover-color: $link !default
+//$navbar-item-hover-background-color: $background !default
+//$navbar-item-active-color: $black !default
+//$navbar-item-active-background-color: transparent !default
+//$navbar-item-img-max-height: 1.75rem !default
+
+/* Navbar Tabs */
+//$navbar-tab-hover-background-color: transparent !default
+//$navbar-tab-hover-border-bottom-color: $link !default
+//$navbar-tab-active-color: $link !default
+//$navbar-tab-active-background-color: transparent !default
+//$navbar-tab-active-border-bottom-color: $link !default
+//$navbar-tab-active-border-bottom-style: solid !default
+//$navbar-tab-active-border-bottom-width: 3px !default
+
+/* Navbar Dropdown */
+//$navbar-dropdown-background-color: $white !default
+//$navbar-dropdown-border-top: 1px solid $border !default
+//$navbar-dropdown-offset: -4px !default
+//$navbar-dropdown-arrow: $link !default
+//$navbar-dropdown-radius: $radius-large !default
+//$navbar-dropdown-z: 20 !default
+
+/* Navbar Dropdown Boxed */
+//$navbar-dropdown-boxed-radius: $radius-large !default
+//$navbar-dropdown-boxed-shadow: 0 8px 8px rgba($black, 0.1), 0 0 0 1px rgba($black, 0.1) !default
+
+/* Navbar Dropdown Items */
+//$navbar-dropdown-item-hover-color: $black !default
+//$navbar-dropdown-item-hover-background-color: $background !default
+//$navbar-dropdown-item-active-color: $link !default
+//$navbar-dropdown-item-active-background-color: $background !default
+
+/* Navbar Divider */
+//$navbar-divider-background-color: $border !default
+
+/* Navbar Fixed Mixins */
+//=navbar-fixed
+//  left: 0
+//  position: fixed
+//  right: 0
+//  z-index: $navbar-fixed-z
+
+/* Navbar Fixed Html Mixins */
+//=navbar-fixed-html
+//  left: 0
+//  position: fixed
+//  right: 0
+
+@keyframes expand_down
+  0%
+    height: 0
+  100%
+    height: $navbar-height
+
+
+
+/*
+ * Navbar Styling Structure
+ * Note:  This can get overwritten in the style.scss file
+ */
+
+.navbar
+  box-shadow: 0px -5px 20px 0px rgba(0,0,0,0.15)
+  border-bottom: 1px solid $mono-gray-2
+
+  &.is-fixed-top
+    animation: expand_down 1.5s linear
+    
+  /* Color Scheme Setup */
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    $color-invert: nth($pair, 2)
+
+    // This will setup &.is-#{$name} for every $colors
+    // which includes 2 colors (color, color-invert)
+    // listed in derived-variables.sass
+    // example: .is-white, .is-black, .is-light, .is-dark, .is-primary, .is-link, .is-info, .is-success, .is-warning, .is-danger
+    &.is-#{$name}
+      background-color: $color
+      color: $color-invert
+      .navbar-brand
+
+      +desktop
+        .navbar-start,
+        .navbar-end
+
+          // @package popin -> WordPress NavWalker Structure
+          & > li.navbar-item
+            & .navbar-dropdown
+              a.navbar-link
+                color: $navbar-item-color
+                +opa
+                &:hover
+                  background-color: $navbar-dropdown-item-hover-background-color
+                  color: $navbar-dropdown-item-hover-color
+                  +opa-hov
+                &.is-active,
+                &.is-active:hover
+                  background-color: $color
+                  color: $color-invert
+
+        // @package popin -> WordPress NavWalker Structure
+        .navbar-item.has-dropdown:hover,
+        .navbar-item.has-dropdown.is-active
+          .navbar-link
+            // background-color: darken($color, 5%)
+            color: $color-invert
+
+        // @package popin -> WordPress NavWalker Structure
+        .navbar-item.has-dropdown
+          .navbar-dropdown
+            opacity: 0
+            // transition: opacity 1s ease-in-out
+            // transition-delay: 2s
+
+          &:hover
+            .navbar-dropdown
+              opacity: 1
+              background: transparent !important
+              transition: opacity 1s ease-in-out
+              // transition-delay: 2s
+
+              // @package popin -> WordPress NavWalker Structure
+              & > a.navbar-item,
+              & > a.navbar-link
+                background-color: transparent
+                +opa
+                &:hover
+                  background-color: lighten($color, 75%)
+                  +opa-hov
+                &.is-active
+                  background-color: $color
+                  color: $color-invert
+
+  /* Container Setup */
+  & > .container
+
+//.navbar-menu
+  // display: none
+
+.navbar-item,
+.navbar-link,
+ color: $navbar-item-color
+ font-weight: 600
+ transition: all .5s ease-in-out
+ &:after
+   border-color: $navbar-item-color
+   background-color: transparent
+   transition: all .5s ease-in-out
+ &:hover
+   color: $accent-teal-af
+   background-color: transparent
+   transition: all .5s ease-in-out
+   &:after
+     border-color: $accent-teal-af
+
+.navbar-item
+  // @package popin -> WordPress NavWalker Structure
+  &:not(.has-dropdown)
+    a.navbar-link
+      padding-right: 1rem
+      &:after
+        display: none
+  &.button
+    +opa
+    &:hover
+      +opa-hov
+      background-color: inherit
+      
++desktop
+  // Normal NavBar
+  .navbar,
+  .navbar-menu,
+  .navbar-start,
+  .navbar-end
+    //align-items: stretch
+    //display: flex
+
+    // @package popin -> WordPress NavWalker Structure
+    li.navbar-item
+      align-items: stretch
+      padding: 0
+
+      &.is-margin-left-auto
+        margin-left: auto
+
+      // @package popin -> WordPress NavWalker Structure
+      &.button
+        margin: auto 1rem
+        a.navbar-link
+          color: $accent-teal-af-invert
+          background-color: $accent-teal-af
+          border-radius: $radius
+
+    .navbar
+    &.is-transparent
+      a.navbar-item,
+
+      // @package popin -> WordPress NavWalker Structure
+      li.navbar-item
+        &:hover,
+        &.is-active
+          background-color: transparent !important
+      .navbar-item.has-dropdown,
+
+      // @package popin -> WordPress NavWalker Structure
+      li.navbar-item.has-dropdown
+        &.is-active,
+        &.is-hoverable:hover
+          .navbar-link,
+            background-color: transparent !important
+      .navbar-dropdown
+        a.navbar-item,
+
+        // @package popin -> WordPress NavWalker Structure
+        a.navbar-link
+          &:hover
+            background-color: $navbar-dropdown-item-hover-background-color
+            color: $navbar-dropdown-item-hover-color
+          &.is-active
+            background-color: $navbar-dropdown-item-active-background-color
+            color: $navbar-dropdown-item-active-color
+
+  .navbar-dropdown
+    border-top: 3px solid $accent-teal-af
+    border-radius: 0
+
+    & > .navbar-item
+
+      // @package popin -> WordPress NavWalker Structure
+      a.navbar-link
+        min-width: 100%
+        color: $navbar-item-color
+
+    // @package popin -> WordPress NavWalker Structure
+    a.navbar-item
+      padding-right: 3rem
+
+      &:hover
+        background-color: $navbar-dropdown-item-hover-background-color
+        color: $navbar-dropdown-item-hover-color
+      &.is-active
+        background-color: $navbar-dropdown-item-active-background-color
+        color: $navbar-dropdown-item-active-color
+
+
+// Join Event Box
+.navbar
+  .control
+    input,
+    .button
+      &.event-code-join
+        // iphone 5 and lower
+        @media (max-width: 320px)
+          +button-small
+      
+        
+
+// Tablet Override
+// @package popin -> WordPress NavWalker Structure
+// All New Below
++touch
+  .navbar
+    .navbar-menu
+      li.navbar-item
+        padding-left: 0
+        &.has-dropdown
+        &.is-hoverable
+          &:not(.button)  // make sure arrow doesn't show if button
+            > a.navbar-link
+              color: $navbar-dropdown-item-hover-color
+              &::after
+                display: block
+                border-color: $navbar-dropdown-item-hover-color
+
+          ul.navbar-dropdown
+            display: block
+
+          &:hover
+          li.navbar-item
+            &:hover
+            a.navbar-link
+        &:hover
+          ul.navbar-dropdown
+            display: block
+            background: lighten($navbar-item-hover-background-color, 5%)
+            border-bottom: 1px solid darken($navbar-item-hover-background-color, 10%)
+
+            li.navbar-item
+              padding-left: 0.75rem
+            &:hover
+            a.navbar-link
+
+        a.navbar-link
+        &.button
+          height: unset
+          text-align: unset
+          a.navbar-link
+            // padding: 0
+            color: $primary
+          &:hover
+            a.navbar-link
+              &:hover
+                background-color: transparent

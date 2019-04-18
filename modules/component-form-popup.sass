@@ -1,0 +1,29 @@
+//  Component: Form Pop-Up
+
+.component-form-popup
+  &.is-active
+    z-index: 999
+  .field
+    margin-bottom: 0rem
+    &:not(:last-child)
+      margin-bottom: 0rem
+    .control
+      .help
+        margin-bottom: 0.25rem
+        &.is-success
+          display: none
+        &.is-active
+          visibility: visible
+        &:not(.is-active)
+          visibility: hidden
+
+.notification
+  position: fixed
+  bottom: 1rem
+  right: 1rem
+
+  &.is-active
+    visiblity: visible
+  
+  &:not(.is-active)
+    visibility: hidden

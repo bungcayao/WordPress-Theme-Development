@@ -1,0 +1,91 @@
+//  Component: Form Pop-Up
+
+// Properties for Floating Notifications Only
+=floating-items-only
+  border-radius: $radius
+  padding: 1.25rem 2.5rem 1.25rem 1.5rem
+
+// Properties for Docked Notifications Only  
+=docked-items-only
+  .docked-start,
+  .docked-end
+    margin-top: .25rem
+    margin-bottom: .25rem
+  .docked-start
+    width: 75%
+    +mobile
+      width: 100%
+  .docked-end
+    width: 25%
+    +mobile
+      width: 100%  
+
+// Component Notification Element
+.component-notifications
+  position: fixed
+  z-index: 10
+  padding: 2rem 
+  box-shadow: 0 2px 3px rgba($black, 0.1)
+  display: none
+  &.is-not-fixed
+    position: relative;
+
+  &.gdpr-enabled
+    z-index: 998
+
+  .section
+    padding-top: unset
+    padding-bottom: unset
+    padding-left: unset
+    padding-right: unset
+    margin: 0 auto
+
+  // Delete Button
+  .delete
+    top: 1rem
+    right: 1rem
+    position: absolute
+    background: transparent
+
+  // Notification Positions
+  &.notifications
+    &-bottom-dock
+      bottom: 0
+      width: 100%
+      +docked-items-only
+
+    &-top-dock
+      top: $navbar-height
+      width: 100%
+      +docked-items-only
+
+    &-bottom-left  
+      bottom: 1rem
+      left: 1rem
+      +floating-items-only
+
+    &-bottom-right  
+      bottom: 1rem
+      right: 1rem
+      +floating-items-only
+
+    &-top-left  
+      btop: $navbar-height
+      right: 1rem
+      +floating-items-only
+      
+    &-top-right  
+      top: $navbar-height
+      right: 1rem
+      +floating-items-only
+  
+  &.is-active
+    display: block
+
+  // &:not(.is-active)
+  //   visibility: hidden
+
+  // General Button Properties for Notifications
+  .button
+    width: 100%
+    margin: .25rem

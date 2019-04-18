@@ -1,0 +1,93 @@
+// TODO (Josh): Do This Later
+// =krisskross($color-name, $color-hex, $linear-position-name, $linear-gradient-direction)
+//   .#{$color-name}
+//     &.#{$linear-position-name}
+//       background-color: transparent
+//       background: linear-gradient($linear-gradient-direction, transparent 50%, $color-hex 51%)
+//     &.--front
+//       z-index: 3
+//     &.--back
+//       z-index: 2
+
+// +kriss-kross(right-to-bottom, to right bottom)
+// +kriss-kross(right-to-top, to right top)
+// +kriss-kross(left-to-bottom, to left bottom)
+
+// Module: Kriss Kross
+section[data-module="component-kriss-kross"],
+*[data-module="component-kriss-kross"]
+  &.top-overlay
+    position: absolute
+    bottom: 0
+    height: 150px
+    width: 100%
+    z-index: 1
+  
+  .kriss,
+  .kross
+    position: absolute
+    bottom: 0
+    height: 100%
+    width: 100%
+    background-color: transparent
+
+    &.--front
+      z-index: 3
+    &.--back
+      z-index: 2
+
++kriss-kross-colors
+    
+
+// NEW Hero Section
+*[data-module="componentize-me-daddy"]
+  // Page Header Title
+  h3
+    margin-top: 1rem
+  // Video Call To Action
+  i[data-video-link]
+    font-size: 4.5rem
+    margin-top: 3.834rem
+    margin-bottom: 4.5rem
+
+// Main Call To Action Box
+*[data-module="component-main-cta-box"]
+  margin: .5rem
+  position: relative
+  padding-top: 1rem
+  padding-bottom: 1rem
+  border: 1px solid $mono-gray-4
+  box-shadow: 0 -5px 20px 0 rgba(0,0,0,.15)
+  border-radius: 4px
+
+
+  // Horiz Center our Input Box Area
+  .columns  
+    .field
+      &.tag
+        &.has-addons
+          justify-content: center !important
+
+    // Join Event Code Box
+    .event-code-join,
+    .auto-tenant-signup.is-hidden-mobile
+      // margin-top: 1.333em
+
+  // Auto Tenant Box
+  .auto-tenant-signup
+    &.is-hidden-mobile
+      &:before
+        content: ''
+        display: block
+        width: 1px
+        position: absolute
+        height: 80%
+        top: 10%
+        background: $mono-gray-2
+
+  // Images
+  +mobile
+    .image
+      &.dont-at-me-bro
+        img
+          width: 50%

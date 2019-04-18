@@ -1,0 +1,230 @@
+<!-- Cookie Consent implented through Google Tag Manager -->
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<style>
+  .cc-grower {
+    max-height: 100% !important;
+    height: auto !important;
+    background-color: rgb(234, 115, 23) !important;
+  }
+  .cc-window.cc-invisible {
+    max-height: 0 !important;
+    opacity: 0 !important;
+  }
+  .cc-window {
+    max-height: 100% !important;
+    opacity: 1 !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
+    transition: all .25s ease-in-out !important;
+    color: #fff !important;
+    background-color: transparent !important
+  }
+  .cc-window.cc-banner {
+    padding: 1.5rem 0 !important;
+  }
+
+  .cc-window.cc-floating {
+    max-width: 100%;
+    /* padding: 0 2rem 2.5rem;; */
+  }
+
+  .cc-banner .cc-message {
+    font-size: .85rem !important;
+  }
+  .cc-btn.cc-allow {
+    min-width: 105px !important;
+    padding: .2rem !important;
+    color: #1dadb3 !important;
+  }
+
+  /* Hidden Cookie Policy Tab */
+  .cc-animate.cc-revoke.cc-top {
+    transform: translateY(.9rem) !important;
+    transition: all .5s ease-in-out !important;
+  }
+  .cc-animate.cc-revoke.cc-top:hover {
+    transform: translateY(.25rem);
+    transition: all .5s ease-in-out !important;
+  }
+  .cc-revoke.cc-top {
+    top: unset;
+    bottom: 0 !important;
+    left: unset;
+    right: 1rem !important;
+    border-top-left-radius: .5em !important;
+    border-top-right-radius: .5em !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+
+  .cc-revoke {
+    color: #fff !important;
+  }
+ 
+  @media screen and (max-width: 600px) {
+    .cc-compliance.cc-highlight {
+      padding:0 !important;
+      margin:0 !important;
+      text-align:left !important;
+    }
+    .cc-btn.cc-deny {
+      display: none !important;
+    }
+    .cc-btn.cc-allow {
+      margin-left: 0 !important;
+    }
+  }
+  @media screen and (max-width: 1087px) {
+    .cc-window.cc-banner {
+      padding: 1em !important;
+    }
+  }
+  @media screen and (min-width: 1088px) {
+    .cc-window {
+        max-width: 960px !important;
+        width: 960px !important;
+    }
+    .cc-window.cc-banner {
+      padding: 1em 0 !important;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .cc-window {
+        max-width: 1152px !important;
+        width: 1152px !important; 
+    }
+    .cc-window.cc-banner {
+      padding: 1em 0!important;
+    }    
+  }
+  @media screen and (min-width: 1472px) {
+    .cc-window {
+      max-width: 1344px !important;
+      width: 1344px !important;
+    }
+    .cc-window.cc-banner {
+      padding: 1em 0 !important;
+    }    
+  }
+
+
+</style>
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"> </script>
+<script>
+  var cookiePolicyMessage = 'We use cookies to offer you a better browsing experience, analyze site traffic and personalize content. Read about how we use cookies and how you can control them in our <a href="/privacy-policy#cookie-policy" title="Cookie Policy" class="has-text-white is-underlined">Cookie Policy</a>. If you continue to use this site, you consent to our use of cookies.';
+
+  window.addEventListener("load", function () {  
+    console.log('GDPR Cookie Consent on Load');
+    
+    window.cookieconsent.initialise({
+      "theme": "classic",
+      "palette": {
+        "popup": {
+          "background": "#ea7317",
+        },
+        "button": {
+          "background": "#ffffff",
+        }
+      },
+      "showLink": false,
+      "type": "opt-in",
+      "revokable": false,
+      "enabled": true,
+      "content": {
+        "message": cookiePolicyMessage,
+        "allow": "Got It!",
+        "dismiss": "Got It!",
+        "deny": "",
+      },
+      "position": "top",
+      "static": "true",
+      onInitialise: function (status) {
+        var type = this.options.type;
+        var didConsent = this.hasConsented();
+        console.log('GDPR Cookie Consent on Initialise - type: '+type+' | consent: ' + didConsent);
+        // console.log('options', this.options);
+        if (type == 'opt-in' && didConsent) {
+          enableCookies();
+          console.log('GDPR Cookie Consent on Initialise: Cookies Enabled');
+        } else {
+          clearCookies();
+          disableCookies();
+          console.log('GDPR Cookie Consent on Initialise: Cookies Disabled');
+        }
+      },
+      onStatusChange: function (status, chosenBefore) {
+        // console.log('options', this.options);
+        var type = this.options.type;
+        var didConsent = this.hasConsented();
+        console.log('GDPR Cookie Consent on Status Change:', type + ' ' + didConsent);
+        if (type == 'opt-in' && didConsent) {
+          enableCookies();
+          console.log('GDPR Cookie Consent on Status Change: Cookies Enabled');
+          setTimeout(function () {
+            window.location.reload(true)
+          }, 100);
+        } else {
+          clearCookies();
+          disableCookies();
+          console.log('GDPR Cookie Consent on Status Change: Cookies Disabled');
+          setTimeout(function () {
+            window.location.reload(true)
+          }, 100);
+        }
+      },
+      onPopupOpen: function() {
+        document.addEventListener('click', function (event) {
+          // If the clicked element matches the selector, scroll to top.
+          if (event.target.matches('.cc-revoke')) {
+            window.scrollTo({
+              top:0,
+              behavior: 'smooth'
+            });
+          // Else, bail on it.
+          } else {
+            return;
+          }
+          // Don't follow the link
+          event.preventDefault();
+        });
+      },
+    });
+  });
+
+  // Disable Cookie (Not DESTROY)
+  function disableCookies() {
+    if (!document.__defineGetter__) {
+      Object.defineProperty(document, 'cookie', {
+        get: function () {
+          return ''
+        },
+        set: function () {
+          return true;
+        }
+      });
+    } else {
+      document.__defineGetter__("cookie", function () {
+        return '';
+      });
+      document.__defineSetter__("cookie", function () { });
+    }
+    console.log('Disable Cookies:', document.cookie);
+  }
+
+  // Clear Cookies
+  function clearCookies() {
+    var res = document.cookie;
+    var multiple = res.split("; ");
+    for(var i = 0; i < multiple.length; i++) {
+        var key = multiple[i].split("=");
+        document.cookie = key[0]+" =; expires = Thu, 01 Jan 1970 00:00:00 UTC";
+    }
+    console.log('Clear Cookies:', document.cookie);
+  }
+
+  // Enable Cookies
+  function enableCookies() {
+    delete document.cookie;
+  }
+</script>

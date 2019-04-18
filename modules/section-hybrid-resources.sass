@@ -1,0 +1,36 @@
+//  Module: Section Resources
+
+.section-resources
+  &.filters-block
+    .filters
+      .filters-list
+        .is-active
+          font-weight: $weight-semibold  
+
+    .filters-section
+      .results-list
+        .disabled
+          display: none !important
+
+        // Card/Blocks  
+        &.columns
+          .column
+            &.card
+              
+              .card-image  
+                figure
+                  background-repeat: no-repeat
+                  background-position: 50% 50%
+                  background-size: cover 
+                    
+  // Modal -> Video
+  .modal
+      &.is-active
+        &.modal-video
+          z-index: 101
+
+  .is-hoverable
+    cursor: pointer
+
+  
+        

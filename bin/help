@@ -1,0 +1,31 @@
+yarn setup:env
+- impports media assets (wp-content/uploads + wp-content/plugins)
+- setup wp-config file (local connects remotely into staging db)
+
+yarn setup:temp
+- impports media assets (wp-content/uploads + wp-content/plugins)
+- setup wp-config-temp file (local connects remotely into staging db)
+
+yarn build
+- clean /dist folder and create /dist production build
+
+yarn start
+- create /dist development build + watches for changes
+
+yarn clean
+- clean /dist folder
+
+yarn deploy:stage
+- deploy wordpress theme to staging env (staging.popinnow.com)
+
+yarn deploy:dry-run
+- dry-run of staging deployment
+
+yarn deploy:stage2
+- deploy wordpress theme to staging env (staging2popinnow.com)
+
+yarn deploy:stage3
+- deploy wordpress theme to staging env (staging3.popinnow.com)
+
+yarn deploy:production
+- deploy wordpress theme to production env (www.popinnow.com)

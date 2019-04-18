@@ -1,0 +1,64 @@
+//  Module: Section Carousel
+
+// Import the `bulma-carousel` node
+@import '../node_modules/bulma-carousel/dist/bulma-carousel.sass';
+
+// carousel
+.section-carousel,
+.section-carousel-content
+
+  .columns
+    &.is-vcentered
+      align-items: center;
+  .carousel
+    // on desktop only,
+    // we are showing full/wide slide
+    // +until-widescreen
+    //   &.is-widescreen
+    //     &.is-2,
+    //     &.is-3,
+    //     &.is-4,
+    //     &.is-5
+    //       .carousel-container
+    //         left: -100% !important
+    //         .carousel-item
+    //           padding: 0 !important
+    //           flex-basis: 100% !important
+
+    .carousel-container
+      //min-height: 400px
+    .carousel-navigation
+      z-index: unset
+      .carousel-nav-left,
+      .carousel-nav-right
+        &.is-overlay
+          .material-icons
+            font-size: 2rem
+            background: transparent
+
+
+// Carousel Images
+.section-carousel
+  .carousel
+    // &.is-2,
+    // &.is-3,
+    // &.is-4,
+    // &.is-5
+    //   .carousel-container
+    //     .carousel-item
+    //       padding: 1em 1em 0 1em
+
+// Carousel Quotes
+.section-carousel-content
+  .carousel
+    .carousel-container
+      //padding-top: 3rem
+      .carousel-item
+        .container
+          // Main Content Container
+          &.has-border-all
+            min-height: 300px
+            padding: 2rem
+          // Sub Text Container
+          &.has-text-centered
+            padding-bottom: 2rem

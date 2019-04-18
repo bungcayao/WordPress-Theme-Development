@@ -1,0 +1,49 @@
+{
+  "name": "POPin-WordPress-Theme",
+  "version": "6.3.1",
+  "repository": "https://github.com/POPInNow/POPin-WordPress-Theme",
+  "author": "The POPin Dev Team",
+  "scripts": {
+    "dev:help": "cat bin/help",
+    "setup:env": "cd ~/www/POPin-WordPress-Env && bin/import stage && bin/setup-wp-config",
+    "setup:temp": "cd ~/www/POPin-WordPress-Env && bin/import stage && bin/setup-wp-confg-temp",
+    "build": "webpack --progress --hide-modules --plugin clean-webpack-plugin --config webpack.config.js --config webpack.config.instapage.js --config webpack.config.analytics.js",
+    "start": "webpack --watch --config webpack.config.dev.js --config webpack.config.analytics.js",
+    "clean": "webpack --progress --hide-modules --plugin clean-webpack-plugin --config webpack.config.dev.js --config webpack.config.analytics.js",
+    "deploy:stage": "bin/deploy stage",
+    "deploy:dry-run": "bin/deploy stage dry-run",
+    "deploy:stage2": "bin/deploy stage2",
+    "deploy:stage3": "bin/deploy stage3",
+    "deploy:prod": "bin/deploy prod",
+    "version:patch": "yarn version -patch -m \"theme version patch bump\" && git push --follow-tags",
+    "version:minor": "yarn version -patch -m \"theme version minor bump\" && git push --follow-tags",
+    "version:major": "yarn version -patch -m \"theme version major bump\" && git push --follow-tags"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "~6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "postcss-loader": "^2.0.8",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "animate.css": "^3.6.1",
+    "bulma": "^0.7.1",
+    "bulma-carousel": "^1.1.0",
+    "bulma-pageloader": "^2.1.0",
+    "bulma-pricingtable": "latest",
+    "jquery": "^3.3.1",
+    "material-design-icons": "^3.0.1",
+    "node-sass": "^4.11.0",
+    "open-sans-fontface": "^1.4.0"
+  }
+}

@@ -1,0 +1,68 @@
+# temp folder #
+###############
+tmp/
+tmp/**
+
+
+# sass-cache + map files #
+##########################
+.sass-cache
+**/*.map
+
+############################################
+# Ignore some other system generated files #
+############################################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.log
+*.sql
+*.sqlite
+**/.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.codekit-cache
+.sass-cache
+# Logs
+error_log
+php_errorlog
+# Sublime
+*.sublime-project
+*.sublime-workspace
+# VSCode
+.code-workspace
+# PhpStorm
+.idea/
+
+# Distribution + Node Folder
+dist/
+dist/**
+node_modules/
+node_modules/**
+
+
+# Always include the build script #
+###################################
+!bin/
+!bin/**
+!build.sh
+!README.md
+!release-notes.md
+!CHANGELOG.md
+!.gitignore
+!webpack.config.js
+!webpack.config.dev.js
+!package.json
