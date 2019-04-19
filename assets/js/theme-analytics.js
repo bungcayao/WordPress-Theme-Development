@@ -1,5 +1,5 @@
 /**
- * POPin Analytics Event Tracking
+ * Theme Analytics Event Tracking
  * Requirements: jQuery, MixPanel, and Google Analytics 
  *  
  * GOOGLE EVENT TRACKING SETUP
@@ -11,16 +11,7 @@
  *
  **/
 
-// function setDataBlockSection() {
-//     let currentPageBlock = 0;
-//     $('.page-block').each(function(){
-//         $(this).attr('data-block-section', 'Page Block ' + currentPageBlock);
-//       currentPageBlock++;
-//     });		
-// }
-// setDataBlockSection();
-
- // Analytics: Section Order
+// Analytics: Section Order
 function setDataSection() {
     let currentSection = 0;
     $('section').each(function(){
@@ -38,9 +29,6 @@ jQuery(function($) {
     // Checking to see if an Action/Behavior happened.
     let isImage, isButton, isNavbar, isNavbarDropdown, isSitemap, isMailto, isTel, isOutbound, isDownload, isModalOpen, isModalClosed, isVideoOpen, isVideoClosed;
 
-    // Set Initial Value
-    actionTaken = linkTitle = currentPage = linkUrl = ctaType = moduleSection = isImage = isButton = isNavbar = isNavbarDropdown = isSitemap = isMailto = isTel = isOutbound = isDownload = isModalOpen = isModalClosed = isVideoOpen = isVideoClosed = null;
-
     /**
      * Detect AutoTenant Use Case
      * @param url 
@@ -54,9 +42,6 @@ jQuery(function($) {
             let useCaseSurvey = url.indexOf('?useCase=survey');
             let useCaseCrowdsource = url.indexOf('?useCase=crowdsource');
             let useCaseLiveEvent = url.indexOf('?useCase=liveevent');
-            // let useCaseImprovment = url.indexOf('?useCase=improvement');
-            // let useCaseMeeting = url.indexOf('?useCase=meeting');
-            // let useCaseTownhall = url.indexOf('?useCase=townhall');
             
             if (useCaseCustom != -1) {
                 return 'custom';
@@ -133,12 +118,12 @@ jQuery(function($) {
             'module': moduleSection,
             'use_case': useCase(linkUrl),
         });
-        // ga('send', {
-        //     hitType: 'event',
-        //     eventCategory: eventName,
-        //     eventAction: actionTaken,
-        //     eventLabel: ctaType + ' : ' + linkTitle
-        // });
+        ga('send', {
+            hitType: 'event',
+            eventCategory: eventName,
+            eventAction: actionTaken,
+            eventLabel: ctaType + ' : ' + linkTitle
+        });
     };
 
     
@@ -167,7 +152,7 @@ jQuery(function($) {
             });
         } else {
             console.error('!isVideoOpen');
-        };
+        }
     });
 
     // section-update-feed, tile - news
@@ -266,7 +251,7 @@ jQuery(function($) {
     });
 
     /** General Event Tracking **/
-    //Track PDF Downloads
+    // Track PDF Downloads
     $('a[href*=".pdf"], *[onclick*=".pdf"]')
         .attr('target', '_blank') //open in new tab
         .click(function () {

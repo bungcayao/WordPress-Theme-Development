@@ -7,6 +7,6 @@ import {videoHandler} from '../assets/js/page-modules.js';
 videoHandler();
 
 jQuery(function($) {
- // Do Something
+ // Do Stuff
 });
 

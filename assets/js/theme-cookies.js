@@ -1,5 +1,5 @@
 /*
- *  POPin Cookies
+ * Theme Cookies and Sessions
  * @link https://howchoo.com/g/mme4owq2m2j/how-to-manage-cookies-in-javascript
  */
 
@@ -43,8 +43,8 @@ export const setSession = function(key, value) {
   window.sessionStorage.setItem(key, value);
 };
 
-// Recusing an Item from a Session
-export const jeffSession = function(key) {
+// Trashing an Item from a Session
+export const trashSession = function(key) {
   console.log('jeffSession:', window.sessionStorage.getItem(key));
   window.sessionStorage.removeItem(key);
 };
