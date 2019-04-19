@@ -26,7 +26,7 @@ elif [ $1 == "stage" ]
                 yarn build
                 echo " "
                 echo "🙏  🙏  🙏     Deploying to" $1
-                rsync -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p18765" ./ popinnow@popinnow.com:/home/popinnow/staging/1/wp-content/themes/popin/
+                rsync -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p102081" ./ username@yourdomain.com:/home/domain/staging/1/wp-content/themes/mytheme/
         elif [ $2 == "dry-run" ]
             then
                 echo " "
@@ -40,7 +40,7 @@ elif [ $1 == "stage" ]
                 echo " "
                 echo "🙏  🙏  🙏     Deploying to" $1
                 echo " "    
-                rsync --dry-run -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p18765" ./ popinnow@popinnow.com:/home/popinnow/staging/1/wp-content/themes/popin/
+                rsync --dry-run -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p102081" ./ username@yourdomain.com:/home/domain/staging/1/wp-content/themes/mytheme/
         else
             echo $ERRORSTRING;
         fi    
@@ -57,7 +57,7 @@ elif [ $1 == "stage2" ]
                 yarn build
                 echo " "
                 echo "🙏  🙏  🙏     Deploying to" $1
-                rsync -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p18765" ./ popinnow@popinnow.com:/home/popinnow/staging/2/wp-content/themes/popin/
+                rsync -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p102081" ./ username@yourdomain.com:/home/domain/staging/2/wp-content/themes/mytheme/
         elif [ $2 == "dry-run" ]
             then
                 echo " "
@@ -71,7 +71,7 @@ elif [ $1 == "stage2" ]
                 echo " "
                 echo "🙏  🙏  🙏     Deploying to" $1
                 echo " "    
-                rsync --dry-run -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p18765" ./ popinnow@popinnow.com:/home/popinnow/staging/2/wp-content/themes/popin/
+                rsync --dry-run -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p102081" ./ username@yourdomain.com:/home/domain/staging/staging/2/wp-content/themes/mytheme/
         else
             echo $ERRORSTRING;
         fi
@@ -89,7 +89,7 @@ elif [ $1 == "stage3" ]
                 yarn build
                 echo " "
                 echo "🙏  🙏  🙏     Deploying to" $1
-                rsync -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p18765" ./ popinnow@popinnow.com:/home/popinnow/staging/3/wp-content/themes/popin/
+                rsync -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p102081" ./ username@yourdomain.com:/home/domain/staging/staging/3/wp-content/themes/mytheme/
         elif [ $2 == "dry-run" ]
             then
                 echo " "
@@ -103,7 +103,7 @@ elif [ $1 == "stage3" ]
                 echo " "
                 echo "🙏  🙏  🙏     Deploying to" $1
                 echo " "    
-                rsync --dry-run -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p18765" ./ popinnow@popinnow.com:/home/popinnow/staging/3/wp-content/themes/popin/
+                rsync --dry-run -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p102081" ./ username@yourdomain.com:/home/domain/staging/staging/3/wp-content/themes/mytheme/
         else
             echo $ERRORSTRING;
         fi
@@ -121,7 +121,7 @@ elif [ $1 == "prod" ]
                 yarn build
                 echo " "  
                 echo "🙏  🙏  🙏     Deploying to" $1
-                rsync -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p18765" ./ popinnow@popinnow.com:/home/popinnow/public_html/wp-content/themes/popin/
+                rsync -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p102081" ./ username@yourdomain.com:/home/domain/staging/public_html/wp-content/themes/mytheme/
         elif [ $2 == "dry-run" ]
             then
                 echo " "
@@ -134,7 +134,7 @@ elif [ $1 == "prod" ]
                 echo " "
                 echo "🙏  🙏  🙏     Deploying to" $1
                 echo " "    
-                rsync --dry-run -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p18765" ./ popinnow@popinnow.com:/home/popinnow/public_html/wp-content/themes/popin/
+                rsync --dry-run -Paz --force --delete --progress --exclude-from=bin/exclude-list.txt -e "ssh -p102081" ./ username@yourdomain.com:/home/domain/staging/public_html/wp-content/themes/mytheme/
         else
             echo $ERRORSTRING;
         fi                         

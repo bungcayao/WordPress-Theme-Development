@@ -1,5 +1,5 @@
 /**
- * POPin Auto Tenant
+ * Theme Auto Tenant
  * Usage: Validate Emails and Take User into Auto Tenant / Prouct
  *
  **/

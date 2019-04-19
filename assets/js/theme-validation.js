@@ -1,5 +1,5 @@
 /**
- * POPin Form Validation
+ * Theme Form Validation
  * Usages for Form Input Field Patterns
  * 
  * @link http://html5pattern.com/

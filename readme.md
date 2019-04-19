@@ -1,7 +1,3 @@
-
-See This Theme in Action:
-https://www.popinnow.com
-
 WordPress Theme Development
 ===
 
@@ -16,68 +12,65 @@ WordPress Theme Development
 **Description:** This WordPress Theme is forked from [Underscores] (https://underscores.me/) Theme Starer Kit and built around the [Bulma Framework] (https://bulma.io).
 
 
-
-Setup for Local Environment
+WordPress Theme in Action:
 ---
-Requirements - [POPin-WordPress-Env](https://github.com/POPInNow/POPin-WordPress-Env)
 
-    1. Clone Repo Locally - git clone git@github.com:POPInNow/POPin-WordPress-Env.git
-    2. Rename Repo Folder to `popin` and move it into your themes directory
-        - htpdocs/wp-content/themes/
-    3. Make sure this theme is selected on your Local WordPress Site  
-        - http://localhost/wp-admin/
-        - Dashboard > Appearance > Themes
+https://www.popinnow.com
+
         
-WordPress Theme Structure: Basic AF Folders
+WordPress Theme Structure:
 ---
-Our Markeing Team's requests come in Fast and Furious. As a result, I tend to create Page Specific assets that are custom and not as reusable. 
 
+**ASSETS**
+
+    downloads
+    fonts
+    images
+    js
+    sass
 
 **CSS**
 
-    css
-    |
-    |---assets/
-    |---assets-newpage/
-    
-  We currently don't have any tasks runners like Gulp, Grunt, or Webpack setup. 
-  
-  For now, I either have an app like [Prepros](https://prepros.io/) running and have it watch for scss changes.
-  
-  or
-  
-  Run [SASS CLI](https://sass-lang.com/install) to watch for changes. [Learn More](https://web-design-weekly.com/2014/06/15/different-sass-output-styles/)\
-  `sass --watch path/watching/input.scss:path/generate/output.min.css --style -compressed`
- 
-   <br>  
+    Styles are built on top of the Bulma CSS Framework. 
+    Custom CSS is located in the `./assets/sass` folder.  
+
+**JS**    
+       
+    Overall theme javascript is created and housed here `./assets/js/`
+    - analytics
+    - autotenant
+    - cookies
+    - custom-snippets
+    - google-analytics
+    - mixpanel
+    - modules
+    - validation
+
     
 **Images**    
        
-    images
-    |
-    |---page-newpage/
+    This is where I house theme specific images, logos, and icon sets.
+    `./assets/images/`
 
-Create a directory that's page pecific to your new page.
-
-   <br> 
    
 **Pages**
 
-    pages
-    |
-    |---custom-<newpage>.php
-    |---landing-<newpage>.php  
-    |---template-<newpage>.php  
-  
-`custom-<newpage>.php` - These are quick, custom, and non-reusable pages. They're only meant to be used for one specific page/post.
+    The goal is to have one basic `page` template that has reusable modular components.
+    Files located here: `./modules/`
+    - components
+    - navbar
+    - redirect pages
+    - sections
 
-`landing-<newpage>.php` - These are quick, custom, and semi-reusable pages. Marketing usually wants landing pages that follow the same layout and structure. They just need to be able to change the Header Titles, Copy Content, Form Links, and background images.
+Yarn + WebPack usage
+--- 
+I built this repo using various js packages using Yarn. You can take a peak under the hood by viewing the `package.json` file.
+I have my script, devDependencies, and dependencies setup there.
 
-`template-<newpage>.php` - These are fully re-usable templates. Think Blogs, News, and Resources. Marketing uses these pages to upload media files and create blog entries, press releases, etc.
+I make use of WebPack to compile and bundle my Main JavaScript file. I also use it to compile my SASS/SCSS files and much more.
+Want to see my setup? Take a look at my `webpack.config.dev.js` and `webpack.config.js` files.
 
-Those are the BASICS, but a there's a ton more that a person can do.
 
-        
 WordPress Theme Development + Deployment
 --- 
 **GIT**
@@ -101,49 +94,9 @@ PR -> staging branch to master branch
 master branch -> deploy to prodmarketing
 ```
 
-<br>
 
-**GIT CONFIG SETUP for GIT-FTP**
-
-I'm using [git-ftp](https://github.com/git-ftp/git-ftp) for Deploying our theme into Devmarketing or Prodmarketing.\
-Installation instructions, [here](https://github.com/git-ftp/git-ftp/blob/master/INSTALL.md). Learn git-ftp's CLI manual [here](https://github.com/git-ftp/git-ftp/blob/master/man/git-ftp.1.md).
-<br><br>
-Below are some git config setups for deploying to devmarketing and prodmarketing.\
-<br>
-Copy and paste these bad boys into your `.git/config file`.
-
-
-**Devmarketing**
-```
-[git-ftp "devmarketing"]
-  user = mediatemple
-  url = popinnow.com
-  password = <1password - MediaTemple FTP (mediatemple)>
-  remote-root = devmarketing.popinnow.com/wp-content/themes/popin/
-```
-
-**Prodmarketing**
-```
-[git-ftp "devmarketing"]
-  user = mediatemple
-  url = popinnow.com
-  password = <1password - MediaTemple FTP (mediatemple)>
-  remote-root = devmarketing.popinnow.com/wp-content/themes/popin/
-```
-Be sure to change out the password `<1password - MediaTemple FTP (mediatemple)>` with the password stored on 1password.
-
-<br>
-
-**TODOS**
-
-- [ ] Audit and Removal of our Assets (CSS + JS) and Media (IMG + VID + PDF).
-- [ ] Audit and Removal of Page Templates.
-- [ ] Theme Project Restructure and Refactoring
-- [ ] Tasks Runners -> Gulp, Grunt, or WebPack
-- [ ] Setting up HTTPS -> @link https://gist.github.com/prof3ssorSt3v3/fab15b677d4a4cc2568f09d477d9c8ac and https://www.youtube.com/watch?v=886Pea2ljm0
-    
-<br>
-
-**PARTING WORDS**
-
-Hopefully this is enough to get a person spun up on developing locally and deploying to devmarketing and prodmarketing.
+Final Words
+--- 
+I've developed my own folder structure and system of what I thought was effecient at the time. 
+As all things go, there will always be more effeciant and optimized ways of doing things.
+My setup might be a little behind, but was put well into use and something I'm proud of.

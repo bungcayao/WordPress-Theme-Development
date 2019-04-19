@@ -1,17 +1,17 @@
 {
-  "name": "POPin-WordPress-Theme",
+  "name": "WordPress-Theme-Development",
   "version": "6.3.1",
-  "repository": "https://github.com/POPInNow/POPin-WordPress-Theme",
-  "author": "The POPin Dev Team",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bungcayao/WordPress-Theme-Development"
+  },
+  "author": "Joshua Bungcayao",
   "scripts": {
     "dev:help": "cat bin/help",
-    "setup:env": "cd ~/www/POPin-WordPress-Env && bin/import stage && bin/setup-wp-config",
-    "setup:temp": "cd ~/www/POPin-WordPress-Env && bin/import stage && bin/setup-wp-confg-temp",
     "build": "webpack --progress --hide-modules --plugin clean-webpack-plugin --config webpack.config.js --config webpack.config.instapage.js --config webpack.config.analytics.js",
     "start": "webpack --watch --config webpack.config.dev.js --config webpack.config.analytics.js",
     "clean": "webpack --progress --hide-modules --plugin clean-webpack-plugin --config webpack.config.dev.js --config webpack.config.analytics.js",
     "deploy:stage": "bin/deploy stage",
-    "deploy:dry-run": "bin/deploy stage dry-run",
     "deploy:stage2": "bin/deploy stage2",
     "deploy:stage3": "bin/deploy stage3",
     "deploy:prod": "bin/deploy prod",
